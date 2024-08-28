@@ -1,5 +1,12 @@
 let changeLog = [
   {
+    date: "August 28, 2024",
+    updates: [
+      "Added option to upgrade to Pro account whcih removes ads and unlocks premium patterns <a href='https://pro.pattern.monster' target='_blank' title='Pattern Monster Pro'>here</a>",
+      "Added 10 free patterns and 14 premium patterns",
+    ],
+  },
+  {
     date: "September 5, 2023",
     updates: [
       "Added 10 new patterns",

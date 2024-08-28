@@ -7,13 +7,13 @@
   import Values from "../routes/_values.js";
   import { themeStore } from "../routes/stores.js";
   import LangSelect from "./LangSelect.svelte";
-  // import ShopSelect from "./ShopSelect.svelte";
+  import ShinyButton from "./ShinyButton.svelte";
   import lang from "../routes/_lang.js";
   let strings = lang.strings;
   let visible = true;
   let bellCount = "0";
 
-  let starsCount = 549;
+  let starsCount = 569;
 
   // const dispatch = createEventDispatcher();
 
@@ -31,14 +31,14 @@
 
     if (!defaultNewTheme) {
       defaultNewTheme = "light";
-
-      // if (window.matchMedia("(prefers-color-scheme)").media !== "not all") {
-      //   if (window.matchMedia("(prefers-color-scheme: dark)").matches) defaultNewTheme = "dark";
-      //   else defaultNewTheme = "light";
-      // }
+      theme = light;
 
       localStorage.setItem("defaultNewTheme", defaultNewTheme);
     }
+
+    if (defaultNewTheme === "dark") theme = dark;
+    else theme = light;
+
     document.documentElement.setAttribute("data-theme", defaultNewTheme);
     themeStore.set(defaultNewTheme);
     userAction();
@@ -63,10 +63,10 @@
 
   function changeTheme() {
     if (defaultNewTheme === "dark") {
-      theme = light;
+      theme = dark;
       defaultNewTheme = "light";
     } else {
-      theme = dark;
+      theme = light;
       defaultNewTheme = "dark";
     }
 
@@ -226,15 +226,7 @@
   </div>
 
   <div class="rightLinks grid grid-flow-col items-center justify-self-end">
-    <!-- <a
-      rel="noopener noreferrer"
-      title={strings.buyCoffee}
-      class="bmc"
-      target="_blank"
-      href="https://www.buymeacoffee.com/naveencs"
-    >
-      {@html Constants.bmcHeader}
-    </a> -->
+    <ShinyButton />
     <a
       rel="noopener noreferrer"
       title={strings.buyCoffee}
@@ -262,8 +254,6 @@
         <span class="coffee">{strings.buyCoffee}</span>
       </div>
     </a>
-    <!-- <ShopSelect /> -->
-    <!-- <a class="downloadsButton" title={strings.downloads} href="downloads">{strings.downloads}</a> -->
     <LangSelect />
     <a
       class="tweetNav"

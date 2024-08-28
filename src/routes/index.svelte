@@ -538,7 +538,7 @@
       </div>
     {/each}
   </div>
-  <p class="container mx-auto">
+  <p class="container mx-auto text-balance">
     {strings.description}
     {strings.description2}
     {strings.description3}

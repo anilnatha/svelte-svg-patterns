@@ -7,12 +7,12 @@
       suffix: "",
       link: "https://app.photoai.me/?via=naveen-cs",
     },
-    {
-      prefix: "Save money and use AI to redesign your interior with ",
-      title: "InteriorAI.com",
-      suffix: " from your laptop or phone",
-      link: "https://interiorai.com?via=naveen-cs",
-    },
+    // {
+    //   prefix: "Save money and use AI to redesign your interior with ",
+    //   title: "InteriorAI.com",
+    //   suffix: " from your laptop or phone",
+    //   link: "https://interiorai.com?via=naveen-cs",
+    // },
     {
       prefix:
         "Professional business headshots, without a physical photo shoot - ",
@@ -32,6 +32,10 @@
       suffix: " in less than 1 hour",
       link: "https://tweethunter.io/?via=naveen-cs",
     },
+    // https://www.opus.pro/
+    // https://www.cometly.com/
+    // https://www.uplisting.io/
+    // https://pallyy.com/
   ];
 
   let link = links[Math.floor(Math.random() * links.length)];

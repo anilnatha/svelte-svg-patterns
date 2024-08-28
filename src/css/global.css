@@ -33,10 +33,6 @@
   --notification-list-padding: 0.5em 1em 0.5em 2.5em;
   --notification-header-padding: 1.5em 1em 0.5em 1.5em;
   --notification-header-margin: 1em -0.8em 0 -2.5em;
-  --list-style-before-left: 0;
-  --list-style-before-right: auto;
-  --list-style-padding: 1px 0 9px 25px;
-  --shop-menu-padding: 0 0 0 0.5em;
 }
 [data-theme="dark"] {
   --pattern-bg: rgb(24, 24, 30);
@@ -60,10 +56,6 @@
   --notification-list-padding: 0.5em 2.5em 0.5em 1em;
   --notification-header-padding: 1.5em 1.5em 0.5em 1em;
   --notification-header-margin: 1em -2.5em 0 -0.8em;
-  --list-style-before-left: auto;
-  --list-style-before-right: 0;
-  --list-style-padding: 1px 25px 9px 0;
-  --shop-menu-padding: 0 0.5em 0 0;
 }
 
 *,
@@ -492,6 +484,10 @@ button:active {
   place-content: center;
 }
 
+.text-balance {
+  text-wrap: balance;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
@@ -532,6 +528,7 @@ nav {
   /* gap: 1em; */
   align-items: center;
   font-size: 0.9em;
+  place-content: center;
 }
 
 .rightLinks {
@@ -549,9 +546,9 @@ nav > a,
 }
 
 nav > a:hover,
-.rightLinks a:hover,
-.rightLinks a:focus,
-.rightLinks a:active,
+.rightLinks a:hover:not(.shiny),
+.rightLinks a:focus:not(.shiny),
+.rightLinks a:active:not(.shiny),
 .iconButton:hover,
 .iconButton:focus,
 .iconButton:active {
@@ -759,7 +756,9 @@ button.bellIcon:active {
 .bmc:hover,
 .bmcCta:hover,
 .bmc:focus,
-.bmcCta:focus {
+.bmcCta:focus,
+.shiny:hover,
+.shiny:focus {
   opacity: 0.85;
 }
 
@@ -971,23 +970,6 @@ button.bellIcon:active {
 .shop-button:hover {
   border: 0.125em solid var(--secondary-text-color);
   color: var(--secondary-text-color);
-} */
-
-/* .innerShop {
-  padding: 1em;
-  margin: 0.25em;
-  background-color: var(--pattern-bg);
-  border-radius: var(--border-radius);
-}
-
-.innerShop span {
-  color: var(--accent-text);
-} */
-/* .shop-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -0.3em;
-  padding: 0.6em 0 0.3em;
 } */
 
 /* Scrollbar */
